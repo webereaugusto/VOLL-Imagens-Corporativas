@@ -1,14 +1,9 @@
 
 import { GoogleGenAI, Modality } from "@google/genai";
 
-// Fix: Use process.env.API_KEY to access the environment variable as per the guidelines.
-const apiKey = process.env.API_KEY;
-
-if (!apiKey) {
-  throw new Error("API_KEY is not defined. Please check your environment variables.");
-}
-
-const ai = new GoogleGenAI({ apiKey });
+// FIX: The API key must be obtained from `process.env.API_KEY` as per the coding guidelines.
+// It is assumed to be pre-configured and accessible in the execution environment.
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
 
 const parseDataUrl = (dataUrl: string) => {
     const match = dataUrl.match(/^data:(.+);base64,(.+)$/);
