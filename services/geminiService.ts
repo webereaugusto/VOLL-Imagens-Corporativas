@@ -1,8 +1,7 @@
 
 import { GoogleGenAI, Modality } from "@google/genai";
 
-// Fix: Per the guidelines, the API key must be obtained from process.env.API_KEY.
-// This change also resolves the TypeScript error related to 'import.meta.env'.
+// Fix: Use process.env.API_KEY to access the environment variable as per the guidelines.
 const apiKey = process.env.API_KEY;
 
 if (!apiKey) {
