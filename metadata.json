@@ -1,0 +1,5 @@
+{
+  "name": "Grupo VOLL - Gerador de Fotos Corporativas",
+  "description": "Um aplicativo que utiliza IA para transformar uma foto de rosto em três opções de fotos corporativas profissionais, ideais para perfis como o LinkedIn. Os usuários podem fazer o upload de uma foto, gerar imagens e baixá-las.",
+  "requestFramePermissions": []
+}
