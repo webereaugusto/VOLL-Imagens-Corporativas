@@ -1,8 +1,15 @@
 
 import { GoogleGenAI, Modality } from "@google/genai";
 
-// Assume process.env.API_KEY is configured in the environment.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+// Fix: Per the guidelines, the API key must be obtained from process.env.API_KEY.
+// This change also resolves the TypeScript error related to 'import.meta.env'.
+const apiKey = process.env.API_KEY;
+
+if (!apiKey) {
+  throw new Error("API_KEY is not defined. Please check your environment variables.");
+}
+
+const ai = new GoogleGenAI({ apiKey });
 
 const parseDataUrl = (dataUrl: string) => {
     const match = dataUrl.match(/^data:(.+);base64,(.+)$/);

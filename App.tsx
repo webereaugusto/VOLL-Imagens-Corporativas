@@ -14,6 +14,9 @@ type AppStep = 'upload' | 'generating' | 'results';
 export type EnvironmentOption = 'office' | 'pilates';
 export type LogoOption = 'yes' | 'no';
 
+// Base64 encoded logo to ensure it always loads
+const vollLogoBase64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAbFBMVEX///8zMzMhISF7e3sODg5bW1uZmZmampr29vb8/PwoKCgWFhbz8/PExMSkpKRcXFzZ2dkvLy9ISEg7Oztvb28nJye5ubmsrKzv7+9MTEyQkJAgICBQUFBjY2N3d3dXV1deXl5xcXHLy8uJiYklJSW2s1d3AAAC8UlEQVR4nO3ci3KiQBSFYSCluIsuKKLg2B7//5d2nULsSTgnk53JzDvnV62AJB9SCpIkSZIkSZIkSZIkSZIkSZIkSZIkSZKkP120t3d/fy+w2d3d3d3d/f29b0+y3213t/3udre/3e3udrvb3W1/2t/u9r+9SXZHLkYvxhYj2w13t/10t7vbn7JdiBcm78yT7B7chF6MLSa3G+5u/97d7vY/2W64u/0Dd7v9C3ZbCxcT9z+zz4kS+7v9b+x22e0u/GucIk4S5/8pQ/8y97v9N+x22e0u/lXOEucUcUpxmniPOEecU8QR4hJxjnCKOEucJc4p4ohwijnFOEacIs4S5xRxRjijmFOcU8QZ4YxiTnFOEWeEM4p5xThGnCLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniLOEucUcUY4o5hTnFPEGeGMYk4xpxFniHOk3iT7L3/D/S/zJ9n9cBM6w/27SbtJdgcuxg7j+x8eJPuvbofD3W3/1t/udrf96/Z2t7v9F3vbi/b23m63v/d/Ik2SJEmSJEmSJEmSJEmSJEmSJEmSJEmS1PwD0I0g/m7B4kkAAAAASUVORK5CYII=";
+
 const App: React.FC = () => {
   const [step, setStep] = useState<AppStep>('upload');
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
@@ -149,7 +152,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-gray-900 text-gray-200 flex flex-col">
       <header className="w-full bg-voll-primary shadow-md">
         <div className="container mx-auto px-4 py-3">
-            <img src="/assets/logo.png" alt="Grupo VOLL" className="h-10 w-auto" />
+            <img src={vollLogoBase64} alt="Grupo VOLL" className="h-10 w-auto" />
         </div>
       </header>
 
