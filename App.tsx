@@ -46,19 +46,19 @@ const App: React.FC = () => {
     const basePrompts = [
       {
         style: "Casual Corporativo",
-        prompt: `Crie uma foto de perfil profissional para o LinkedIn a partir da imagem fornecida. O objetivo é um estilo casual-corporativo. Altere a roupa para uma camisa polo elegante ou uma blusa sofisticada, e o fundo para ${backgroundInstruction}. É crucial preservar com total fidelidade a aparência da pessoa: rosto, cabelo, acessórios (brincos, piercings, etc.) e a textura da pele devem permanecer inalterados.`,
+        prompt: `Crie uma foto de perfil profissional para o LinkedIn a partir da imagem fornecida. O objetivo é um estilo casual-corporativo. Altere a roupa para uma camisa polo elegante ou uma blusa sofisticada, e o fundo para ${backgroundInstruction}. É crucial preservar com total fidelidade a aparência da pessoa: rosto, cabelo, formato do corpo, acessórios (brincos, piercings, etc.) e a textura da pele devem permanecer inalterados, sem engordar a pessoa.`,
       },
       {
         style: "Sério e Confiante",
-        prompt: `Crie uma foto de perfil profissional para o LinkedIn a partir da imagem fornecida, com um estilo sério e confiante. Altere a roupa para um terno formal (para homens) ou um blazer profissional (para mulheres), e o fundo para ${backgroundInstruction}. É crucial preservar com total fidelidade a aparência da pessoa: rosto, cabelo, acessórios (brincos, piercings, etc.) e a textura da pele devem permanecer inalterados.`,
+        prompt: `Crie uma foto de perfil profissional para o LinkedIn a partir da imagem fornecida, com um estilo sério e confiante. Altere a roupa para um terno formal (para homens) ou um blazer profissional (para mulheres), e o fundo para ${backgroundInstruction}. É crucial preservar com total fidelidade a aparência da pessoa: rosto, cabelo, formato do corpo, acessórios (brincos, piercings, etc.) e a textura da pele devem permanecer inalterados, sem engordar a pessoa.`,
       },
       {
         style: "Profissional Intermediário",
-        prompt: `Crie uma foto de perfil profissional para o LinkedIn a partir da imagem fornecida, buscando um equilíbrio entre formal e casual. Altere a roupa para uma camisa social sem gravata ou um blazer moderno, e o fundo para ${backgroundInstruction}. É crucial preservar com total fidelidade a aparência da pessoa: rosto, cabelo, acessórios (brincos, piercings, etc.) e a textura da pele devem permanecer inalterados.`,
+        prompt: `Crie uma foto de perfil profissional para o LinkedIn a partir da imagem fornecida, buscando um equilíbrio entre formal e casual. Altere a roupa para uma camisa social sem gravata ou um blazer moderno, e o fundo para ${backgroundInstruction}. É crucial preservar com total fidelidade a aparência da pessoa: rosto, cabelo, formato do corpo, acessórios (brincos, piercings, etc.) e a textura da pele devem permanecer inalterados, sem engordar a pessoa.`,
       },
       {
         style: "Preto e Branco Elegante",
-        prompt: "Crie uma foto de perfil profissional em preto e branco com alto contraste, estilo editorial de revista. O fundo deve ser totalmente preto. Altere a roupa para algo simples e elegante, como uma gola alta preta. É crucial preservar com total fidelidade a aparência da pessoa: rosto, cabelo, acessórios (brincos, piercings, etc.) e a textura da pele devem permanecer inalterados.",
+        prompt: "Crie uma foto de perfil profissional em preto e branco com alto contraste, estilo editorial de revista. O fundo deve ser totalmente preto. Altere a roupa para algo simples e elegante, como uma gola alta preta. É crucial preservar com total fidelidade a aparência da pessoa: rosto, cabelo, formato do corpo, acessórios (brincos, piercings, etc.) e a textura da pele devem permanecer inalterados, sem engordar a pessoa.",
       },
     ];
     
