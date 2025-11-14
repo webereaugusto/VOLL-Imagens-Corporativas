@@ -52,7 +52,7 @@ export const generateCorporateImage = async (
         
         const textResponse = response.text;
         if (textResponse && textResponse.trim().length > 0) {
-            throw new Error(`A IA não conseguiu gerar a imagem e retornou a seguinte mensagem: "${textResponse.trim()}"`);
+            throw new Error(`A IA Google não conseguiu gerar a imagem e retornou a seguinte mensagem: "${textResponse.trim()}"`);
         }
         
         throw new Error("A resposta da IA não continha uma imagem. Tente novamente ou use uma foto diferente.");
